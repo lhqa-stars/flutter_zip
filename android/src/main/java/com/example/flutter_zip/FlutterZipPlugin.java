@@ -141,7 +141,7 @@ public class FlutterZipPlugin implements FlutterPlugin, MethodCallHandler {
    */
   public File[] unzip(File zipFile, String dest, String passwd) throws ZipException {
     ZipFile zFile = new ZipFile(zipFile);
-    zFile.setFileNameCharset("GBK");
+    zFile.setFileNameCharset("UTF-8");
     if (!zFile.isValidZipFile()) {
       throw new ZipException("压缩文件不合法,可能被损坏.");
     }
